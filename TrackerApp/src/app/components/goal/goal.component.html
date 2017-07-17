@@ -1,0 +1,85 @@
+<div class="main-container border align-center">
+<div class="flex-container">
+  <div class=goal-flex-element-05></div>
+  <div class="goal-container-top goal-flex-element-5" (click)="toggleGoalDescription()">
+    <div style="display: flex" class="white-text">
+      <div class="color-corner flex-element-1">
+        <md-icon class="marginated-top-5 center-icon">tag_faces</md-icon>
+      </div>
+      <div class="flex-element-5">
+        <h4>{{goal.title}}</h4>
+      </div>
+    </div>
+  </div>
+  <div class=goal-flex-element-05></div>
+</div>
+
+<div class="flex-container" *ngIf="showGoalDescription">
+  <div class=goal-flex-element-05></div>
+  <div class="goal-con goal-flex-element-5">
+    <div style="display: flex" class="white-text">
+      <div class="color-block-description flex-element-1">
+        <p>{{totalPoints}}</p>
+      </div>
+      <div class="flex-element-5 color-block-actions">
+        <div class="flex-container">
+          <div class="flex-element-1 text-align-center block-blue">
+            <p class="text-small">{{goal.description}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=goal-flex-element-05></div>
+</div>
+
+<div class="flex-container">
+  <div class=goal-flex-element-05></div>
+  <div class="goal-container-middle-header goal-flex-element-5">
+    <div style="display: flex" class="blue-text">
+      <div class="color-block-actions flex-element-1">
+        <md-icon class="marginated-top-5 center-icon">tag_faces</md-icon>
+      </div>
+      <div class="flex-element-5" (click)="toggleActions()">
+        <h4>Meetups organiseren</h4>
+      </div>
+    </div>
+  </div>
+  <div class=goal-flex-element-05></div>
+</div>
+
+<div class="flex-container" *ngIf="showActions" [@enterAnimation]>
+  <div class=goal-flex-element-05></div>
+  <div class="goal-con goal-flex-element-5">
+    <div style="display: flex" class="white-text">
+      <div class="color-block-actions-detail flex-element-1">
+        <p>{{totalPoints}}</p>
+      </div>
+      <div class="flex-element-5 color-block-actions">
+        <div class="flex-container">
+          <div class="flex-element-1 text-align-center block-red">
+            <p class="text-small">Zorg expertise als manager uitdragen naar wereld</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=goal-flex-element-05></div>
+</div>
+
+
+<div class="flex-container">
+  <div class=goal-flex-element-05></div>
+  <div class="goal-container-bottom goal-flex-element-5">
+    <div style="display: flex" class="grey-text">
+      <div class="color-corner-date flex-element-1">
+        <md-icon class="marginated-top-5 center-icon">tag_faces</md-icon>
+      </div>
+      <div class="flex-element-5">
+        <h4>{{goal.finished}}</h4>
+      </div>
+    </div>
+  </div>
+  <div class=goal-flex-element-05></div>
+</div>
+</div>

@@ -1,0 +1,24 @@
+<div div id="loginPage">
+<div class="flex-container">
+  <div class="login-grid-element"></div>
+  <div class="login-flex-element">
+    <img src="/assets/fwg.png" class="img-responsive flex-img login-logo">
+  </div>
+    <div class="login-grid-element"></div>
+</div>
+<div class="flex-container tracker-container">
+  <div class="login-grid-element"></div>
+  <div class="login-flex-element">
+    <form id="loginForm" [formGroup]="loginForm" (ngSubmit)="login()">
+      <md-input-container class="login-input">
+        <input mdInput formControlName="username" type="text" placeholder="Username"/>
+      </md-input-container>
+      <md-input-container class="login-input">
+        <input mdInput formControlName="password" type="password" placeholder="Password"/>
+      </md-input-container>
+      <button [disabled]="!loginForm.valid" md-raised-button type="submit" class="login-input">Login</button>
+    </form>
+  </div>
+  <div class="login-grid-element"></div>
+</div>
+<div>

@@ -1,0 +1,51 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+@font-face {
+    font-family: 'logo';
+    src: url('assets/fonts/bitter-bold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+html{
+  height: 100%
+}
+html body{
+  background: white; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(white, #61C7AA, #239DA5); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(white, #61C7AA, #239DA5); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(white, #61C7AA, #239DA5); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(white, #61C7AA, #239DA5); /* Standard syntax */
+}
+
+.flex-container{
+  display:flex;
+  justify-content: center!important;
+}
+.text-small{
+  font-size: 10px;
+}
+.flex-img{
+  flex-flow: row;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.inline{
+  display: inline;
+}
+.text-align-center{
+  text-align: center!important;
+}
+.flex-element-1{
+  flex: 1;
+}
+.marginated{
+  margin: 10px!important;
+}
+.full-width{
+  width: 100%;
+}
+.mat-dialog-container {
+    max-width: none !important;
+    background-color: #4DB9A8!important;
+}

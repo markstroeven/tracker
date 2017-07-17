@@ -1,0 +1,29 @@
+<div class="flex-container">
+  <div class="dashboard-flex-element-1"></div>
+  <div class="dashboard-flex-element-5">
+    <img height="25%" width="25%" class="img-responsive center-block margin-top" src="/assets/fwg.png">
+  </div>
+  <div class="dashboard-flex-element-1"></div>
+</div>
+<div class="flex-container">
+  <div class="dashboard-flex-element-1"></div>
+  <div class="dashboard-flex-element-5 text-align-center">
+    <h2 class="text-blue">Made</h2>
+    <h2 class="text-blue">Monitor</h2>
+  </div>
+  <div class="dashboard-flex-element-1"></div>
+</div>
+<div class="container">
+      <div class="animation-container">
+        <h2 class="points-label">{{getTotalPoints()}}</h2>
+      <div *ngFor="let goal of goals; let i = index">
+        <div class="{{classnames[i]}}">
+          <svg class="tracker-button" (click)="openGoal(goal)">
+            <circle cx="50" cy="50" r="50"/>
+             <text x="20" y="40" font-family="Verdana" font-size="20" fill="white">{{goal.points}}</text>
+            <image x="20" y="10" width="80" height="80" attr.xlink:href="{{goal.icon}}"/>
+          </svg>
+        </div>
+      </div>
+      </div>
+</div>

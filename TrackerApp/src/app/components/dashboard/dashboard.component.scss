@@ -1,0 +1,179 @@
+$animation-length: 1s;
+
+
+
+.dashboard-flex-element-1{
+  flex: 1;
+}
+
+.dashboard-flex-element-5{
+  flex: 5;
+}
+.text-blue{
+  font-family: "logo";
+  color: #002F50;
+}
+.margin-top{
+  margin-top: 25px;
+}
+.tracker-button{
+  width:100px;
+  height:100px;
+  fill: #FF7569;
+}
+
+.tracker-button:hover{
+  fill: white;
+}
+
+.container{
+  position: relative;
+  width: 40%;
+  height: 120px;
+  margin: 20px auto;
+  margin-top: 35%;
+}
+.animation-container{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 10px;
+  left: 55%;
+  margin-left: -50px;
+  transform: scale(0.5); //Scale down to mobile friendly size
+}
+.ico{
+
+}
+.animation-straight-bottom{
+  position: absolute;
+    -webkit-animation: circle-bottom-straight $animation-length ease-in forwards; /* Chrome, Safari 5 */
+     -moz-animation: circle-bottom-straight $animation-length ease-in forwards; /* Firefox 5-15 */
+       -o-animation: circle-bottom-straight $animation-length ease-in forwards; /* Opera 12+ */
+          animation: circle-bottom-straight $animation-length ease-in forwards; /* Chrome, Firefox 16+,                                                  IE 10+, Safari 5 */
+}
+
+.animation-straight-top{
+  position: absolute;
+    -webkit-animation: circle-top-straight $animation-length ease-in forwards; /* Chrome, Safari 5 */
+     -moz-animation: circle-top-straight $animation-length ease-in forwards; /* Firefox 5-15 */
+       -o-animation: circle-top-straight $animation-length ease-in forwards; /* Opera 12+ */
+          animation: circle-top-straight $animation-length ease-in forwards; /* Chrome, Firefox 16+,                                                  IE 10+, Safari 5 */
+}
+
+.animation-bottom-right{
+  position: absolute;
+    -webkit-animation: circle-bottom-right $animation-length ease-in forwards; /* Chrome, Safari 5 */
+     -moz-animation: circle-bottom-right  $animation-length ease-in forwards; /* Firefox 5-15 */
+       -o-animation: circle-bottom-right  $animation-length ease-in forwards; /* Opera 12+ */
+          animation: circle-bottom-right  $animation-length ease-in forwards; /* Chrome, Firefox 16+,                                                  IE 10+, Safari 5 */
+}
+
+.animation-top-left{
+  position: absolute;
+    -webkit-animation: circle-top-left $animation-length ease-in forwards; /* Chrome, Safari 5 */
+     -moz-animation: circle-top-left $animation-length ease-in forwards; /* Firefox 5-15 */
+       -o-animation: circle-top-left $animation-length ease-in forwards; /* Opera 12+ */
+          animation: circle-top-left $animation-length ease-in forwards; /* Chrome, Firefox 16+,                                                  IE 10+, Safari 5 */
+}
+
+.animation-top-right{
+  position: absolute;
+    -webkit-animation: circle-top-right $animation-length ease-in forwards; /* Chrome, Safari 5 */
+     -moz-animation: circle-top-right $animation-length ease-in forwards; /* Firefox 5-15 */
+       -o-animation: circle-top-right$animation-length ease-in forwards; /* Opera 12+ */
+          animation: circle-top-right$animation-length ease-in forwards; /* Chrome, Firefox 16+,                                                  IE 10+, Safari 5 */
+}
+
+.animation-bottom-left{
+  position: absolute;
+    -webkit-animation: circle-bottom-left $animation-length ease-in forwards; /* Chrome, Safari 5 */
+     -moz-animation: circle-bottom-left $animation-length ease-in forwards; /* Firefox 5-15 */
+       -o-animation: circle-bottom-left $animation-length ease-in forwards; /* Opera 12+ */
+          animation: circle-bottom-left $animation-length ease-in forwards; /* Chrome, Firefox 16+,                                                  IE 10+, Safari 5 */
+}
+
+@-webkit-keyframes circle-bottom-straight {
+  from {
+    -webkit-transform: scale(0) rotate(0deg) translateX(0px) translateY(0px) rotate(0deg);
+    opacity: 0;
+  }
+  to   {
+    -webkit-transform: scale(1) rotate(0) translateX(0px) translateY(200px) rotate(-360deg);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes circle-top-straight {
+    from {
+      -webkit-transform: scale(0) rotate(0deg) translateX(0px) translateY(0px) rotate(0deg);
+      opacity: 0;
+    }
+    to   {
+      -webkit-transform: scale(1) rotate(0) translateX(0px) translateY(-200px) rotate(0);
+      opacity: 1;
+    }
+}
+@-webkit-keyframes circle-bottom-right{
+  from {
+    -webkit-transform: scale(0) rotate(0deg) translateX(0px) translateY(0px) rotate(0deg);
+    opacity: 0;
+  }
+  to   {
+    -webkit-transform: scale(1) rotate(0) translateX(200px) translateY(100px) rotate(-0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes circle-top-left {
+    from {
+      -webkit-transform: scale(0) rotate(0deg) translateX(0px) translateY(0px) rotate(0deg);
+      opacity: 0;
+    }
+    to   {
+      -webkit-transform: scale(1) rotate(0) translateX(-200px) translateY(-100px) rotate(-0);
+      opacity: 1;
+    }
+}
+@-webkit-keyframes circle-top-right {
+  from {
+    -webkit-transform: scale(0) rotate(0deg) translateX(0px) translateY(0px) rotate(0deg);
+    opacity: 0;
+  }
+  to   {
+      -webkit-transform: scale(1) rotate(0) translateX(200px) translateY(-100px) rotate(-0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes circle-bottom-left {
+    from {
+      -webkit-transform: scale(0) rotate(0deg) translateX(0px) translateY(0px) rotate(0deg);
+      opacity: 0;
+    }
+    to   {
+      -webkit-transform: scale(1) rotate(0) translateX(-200px) translateY(100px) rotate(-0);
+      opacity: 1;
+    }
+}
+
+// @-moz-keyframes myOrbit {
+//     from { -moz-transform: rotate(0deg) translateX(150px) rotate(0deg); }
+//     to   { -moz-transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+// }
+//
+// @-o-keyframes myOrbit {
+//     from { -o-transform: rotate(0deg) translateX(150px) rotate(0deg); }
+//     to   { -o-transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+// }
+//
+// @keyframes myOrbit {
+//     from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+//     to   { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+// }
+
+
+.points-label{
+  width: 1em;
+  position: absolute;
+  top: 25%;
+  left: 30%;
+
+}

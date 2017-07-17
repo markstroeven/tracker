@@ -1,0 +1,155 @@
+<div class="text-align-center colored" *ngIf="currentStep == 1" [@enterAnimation]>
+   <div class="border marginated-sides">
+      <div class="flex-container">
+         <div class="title-bar flex-element-1">
+            <h4>Nieuw doel aanmaken</h4>
+         </div>
+      </div>
+      <div class="flex-container">
+         <div class="content-box flex-element-1">
+            <h5 class="contentcolor">Formuleer een doel waar jij je in herkent en dat ook voor jou haalbaar is.</h5>
+         </div>
+      </div>
+      <div class="flex-container">
+         <div class="content-box flex-element-1">
+            <div class="input-container">
+               <input [(ngModel)]="goal.title" class="text-input marginated-top-bottom" type="text" placeholder=""/>
+            </div>
+         </div>
+      </div>
+      <div class="flex-container">
+         <div class="content-box-brown-block flex-element-1">
+            <h5 class="contentcolor">Geef in punten aan wat de waarde van dit doel is.</h5>
+         </div>
+      </div>
+      <div class="flex-container">
+         <div class="content-box-brown flex-element-1">
+            <div class="input-container">
+               <input [(ngModel)]="goal.points" class="number-input marginated-top-bottom" type="number" placeholder=""/>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<div class="text-align-center colored" *ngIf="currentStep == 2" [@enterAnimation]>
+   <div class="border marginated-sides">
+      <div class="flex-container">
+         <div class="title-bar flex-element-1">
+            <h4>Nieuw doel aanmaken</h4>
+         </div>
+      </div>
+      <div class="flex-container">
+         <div class="content-box flex-element-1">
+            <h5 class="contentcolor">Onder welke categorie valt je doel ?</h5>
+         </div>
+      </div>
+      <div class="flex-container">
+         <div class="content-box-bottom-border flex-element-1">
+            <div class="input-container">
+               <md-list>
+                  <md-list-item>
+                     <a class="full-width" (click)="nextStep(1)">
+                        <h6 class="full-width list-item">Intern manifesteren</h6>
+                     </a>
+                  </md-list-item>
+                  <md-list-item>
+                     <a class="full-width" (click)="nextStep(2)">
+                        <h6 class="full-width list-item">Extern manifesteren</h6>
+                     </a>
+                  </md-list-item>
+                  <md-list-item>
+                     <a class="full-width" (click)="nextStep(3)">
+                        <h6 class="full-width list-item">Commercieel/Financieel</h6>
+                     </a>
+                  </md-list-item>
+               </md-list>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+
+<div class="text-align-center colored" *ngIf="currentStep == 3" [@enterAnimation]>
+   <div class="border marginated-sides">
+      <div class="flex-container">
+         <div class="title-bar flex-element-1">
+            <h4>Nieuw doel aanmaken</h4>
+         </div>
+      </div>
+      <div class="flex-container">
+         <div class="content-box flex-element-1">
+            <h5 class="contentcolor">Welke acties ga jij nemen om tot dit doel te komen ?</h5>
+         </div>
+      </div>
+      <div class="flex-container">
+         <div class="content-box-bottom-border flex-element-1">
+            <div class="input-container">
+              <button (click)="openActionDialog()" md-raised-button>Voeg actie toe</button>
+               <md-list>
+
+               </md-list>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+
+<div class="text-align-center colored" *ngIf="currentStep == 4" [@enterAnimation]>
+   <div class="border marginated-sides">
+      <div class="flex-container">
+         <div class="title-bar flex-element-1">
+            <h4>Nieuw doel aanmaken</h4>
+         </div>
+      </div>
+      <div class="flex-container">
+         <div class="content-box flex-element-1">
+            <h5 class="contentcolor">Wanneer wil jij dit doel bereikt hebben ?</h5>
+         </div>
+      </div>
+      <div class="flex-container">
+         <div class="content-box flex-element-1">
+            <div class="input-container">
+              <md-input-container>
+    <input [(ngModel)]="goal.startDate" mdInput [mdDatepicker]="pickerStart" placeholder="Choose a date">
+    <button mdSuffix [mdDatepickerToggle]="pickerStart"></button>
+  </md-input-container>
+  <md-datepicker #pickerStart></md-datepicker>
+            </div>
+         </div>
+      </div>
+      <div class="flex-container">
+         <div class="content-box-bottom-border flex-element-1">
+            <div class="input-container">
+              <md-input-container>
+  <input [(ngModel)]="goal.finished" mdInput [mdDatepicker]="pickerEnd" placeholder="Choose a date">
+  <button mdSuffix [mdDatepickerToggle]="pickerEnd"></button>
+</md-input-container>
+<md-datepicker #pickerEnd></md-datepicker>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+
+
+
+<div class="flex-container">
+   <div class="flex-element-1"></div>
+   <div class="flex-element-1">
+      <button class="marginated" [disabled]="currentStep == 1" md-raised-button (click)="previousStep()"><</button>
+   </div>
+   <div class="flex-element-1">
+      <button class="marginated" md-raised-button (click)="routeHome()">Home</button>
+   </div>
+   <div class="flex-element-1">
+      <button class="marginated" *ngIf="currentStep != 4" [disabled]="currentStep == 4" md-raised-button (click)="nextStep()">></button>
+   </div>
+   <div class="flex-element-1">
+      <button class="marginated" *ngIf="currentStep == 4" md-raised-button (click)="save()">Sla op</button>
+   </div>
+   <div class="flex-element-1"></div>
+</div>
